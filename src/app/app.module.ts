@@ -7,6 +7,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { UnitsPageComponent } from './pages/units-page/units-page.component';
 import { UnitDetailPageComponent } from './pages/unit-detail-page/unit-detail-page.component';
 import { LabelValueItemComponent } from './components/label-value-item/label-value-item.component';
+import { StoreModule } from '@ngrx/store';
+import { changeTitleReducer } from './stateManagement/pageTitle.reducer';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { LabelValueItemComponent } from './components/label-value-item/label-val
   ],
   imports: [
     BrowserModule,
+    StoreModule.forRoot({ title: changeTitleReducer }),
     AppRoutingModule
   ],
   providers: [],

@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row align-items-center py-4">
-    <div class="col-lg-8 offset-lg-2 text-center"><h1 class="mb-0">{{pageTitle}}</h1></div>
+    <div class="col-lg-8 offset-lg-2 text-center"><h1 class="mb-0">{{title$ | async}}</h1></div>
     <div class="col-lg-2">
       <nav class="navbar navbar-expand-lg">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,8 +8,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
-          <a class="nav-link" routerLink="/units" routerLinkActive="active" ariaCurrentWhenActive="page">Units</a>
+          <a class="nav-link" routerLink="/" (click)="onNavClick('Home')" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+          <a class="nav-link" routerLink="/units" (click)="onNavClick('Units')" routerLinkActive="active" ariaCurrentWhenActive="page">Units</a>
         </div>
       </div>
     </nav>
