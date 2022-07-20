@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'aeo-characters';
+  pageTitle = 'Home'; // TODO: Make it dynamic variable
 }
