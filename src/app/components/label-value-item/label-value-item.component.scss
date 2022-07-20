@@ -1,0 +1,12 @@
+.label-value-item {
+    border: 1px solid #000;
+    margin-bottom: 0px;
+    padding:15px;
+    border-bottom:0px;
+    .row > div:first-child {
+        font-weight: 600;
+    }
+}
+:host.last .label-value-item {
+    border-bottom:1px solid;
+}

@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { UnitsPageComponent } from './pages/units-page/units-page.component';
 import { UnitDetailPageComponent } from './pages/unit-detail-page/unit-detail-page.component';
+import { LabelValueItemComponent } from './components/label-value-item/label-value-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     UnitsPageComponent,
-    UnitDetailPageComponent
+    UnitDetailPageComponent,
+    LabelValueItemComponent
   ],
   imports: [
     BrowserModule,
