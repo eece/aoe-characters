@@ -5,7 +5,7 @@ import { UnitDetailPageComponent } from './pages/unit-detail-page/unit-detail-pa
 import { UnitsPageComponent } from './pages/units-page/units-page.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'units', component: UnitsPageComponent },
   { path: 'unit-detail/:id', component: UnitDetailPageComponent },
 ];
