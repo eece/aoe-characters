@@ -4,6 +4,7 @@ import { changeTitle } from './pageTitle.actions';
 
 export const initialState = 'Home';
 
+
 export const changeTitleReducer = createReducer(
   initialState,
   on(changeTitle, (state, title) => {
