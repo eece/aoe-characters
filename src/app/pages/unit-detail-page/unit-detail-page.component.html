@@ -1,16 +1,17 @@
 <div class="row">
-    <div class="col-lg-2">
+    <div class="col-lg-3">
         <div class="label-value-item-list">
-            <app-label-value-item [label]="'ID'" [value]="'1'"></app-label-value-item>
-            <app-label-value-item [label]="'Name'" [value]="'1'"></app-label-value-item>
-            <app-label-value-item [label]="'Description'" [value]="'1'"></app-label-value-item>
-            <app-label-value-item [label]="'Wood Cost'" [value]="'1'"></app-label-value-item>
-            <app-label-value-item [label]="'Gold Cost'" [value]="'1'"></app-label-value-item>
-            <app-label-value-item [label]="'Build Time'" [value]="'1'"></app-label-value-item>
-            <app-label-value-item [label]="'Reload Time'" [value]="'1'"></app-label-value-item>
-            <app-label-value-item [label]="'Hit Points'" [value]="'1'"></app-label-value-item>
-            <app-label-value-item [label]="'Attack'" [value]="'1'"></app-label-value-item>
-            <app-label-value-item [ngClass]="'last'" [label]="'Accuary'" [value]="'1'"></app-label-value-item>
+            <app-label-value-item [label]="'ID'" [value]="unit?.id"></app-label-value-item>
+            <app-label-value-item [label]="'Name'" [value]="unit?.name"></app-label-value-item>
+            <app-label-value-item [label]="'Description'" [value]="unit?.description"></app-label-value-item>
+            <app-label-value-item [label]="'Wood Cost'" [value]="unit?.cost.Wood"></app-label-value-item>
+            <app-label-value-item [label]="'Gold Cost'" [value]="unit?.cost.Gold"></app-label-value-item>
+            <app-label-value-item [label]="'Build Time'" [value]="unit?.build_time"></app-label-value-item>
+            <app-label-value-item [label]="'Reload Time'" [value]="unit?.reload_time"></app-label-value-item>
+            <app-label-value-item [label]="'Hit Points'" [value]="unit?.hit_points"></app-label-value-item>
+            <app-label-value-item [label]="'Attack'" [value]="unit?.attack"></app-label-value-item>
+            <app-label-value-item [label]="'Armor'" [value]="unit?.armor"></app-label-value-item>
+            <app-label-value-item [ngClass]="'last'" [label]="'Accuary'" [value]="unit?.accuracy"></app-label-value-item>
         </div>
     </div>
 </div>

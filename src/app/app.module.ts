@@ -9,6 +9,7 @@ import { UnitDetailPageComponent } from './pages/unit-detail-page/unit-detail-pa
 import { LabelValueItemComponent } from './components/label-value-item/label-value-item.component';
 import { StoreModule } from '@ngrx/store';
 import { changeTitleReducer } from './stateManagement/pageTitle.reducer';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { changeTitleReducer } from './stateManagement/pageTitle.reducer';
   imports: [
     BrowserModule,
     StoreModule.forRoot({ title: changeTitleReducer }),
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
