@@ -8,9 +8,9 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let unit of unitsData; index as i;">
+        <tr *ngFor="let unit of unitsData;">
         <td class="id" scope="row">{{unit.id}}</td>
-        <td>{{unit.name}}</td>
+        <td><a class="link-dark fw-bold text-decoration-none" [routerLink]="['/unit-detail/' + unit.id]">{{unit?.name}}</a></td>
         <td>{{unit.age}}</td>
         <td>
             <div *ngIf="unit?.cost?.Wood">Wood:{{unit?.cost?.Wood}}</div>
