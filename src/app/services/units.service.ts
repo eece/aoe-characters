@@ -17,6 +17,12 @@ export class UnitsService {
     }));
   }
 
+  public getUnits(filter?: any): Observable<Array<IUnitDetail> | undefined> {
+    return this.getJSON().pipe(map((data) => {
+      return data.units;
+    }));
+  }
+
   public getJSON(): Observable<UnitsDataDto> {
     return this.http.get<UnitsDataDto>(this._jsonURL);
   }

@@ -1,1 +1,23 @@
-<p>units-page works!</p>
+<table class="table table-bordered units-table">
+    <thead>
+        <tr>
+        <th class="id">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Costs</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let unit of unitsData; index as i;">
+        <td class="id" scope="row">{{unit.id}}</td>
+        <td>{{unit.name}}</td>
+        <td>{{unit.age}}</td>
+        <td>
+            <div *ngIf="unit?.cost?.Wood">Wood:{{unit?.cost?.Wood}}</div>
+            <div *ngIf="unit?.cost?.Food">Food:{{unit?.cost?.Food}}</div>
+            <div *ngIf="unit?.cost?.Gold">Gold:{{unit?.cost?.Gold}}</div>
+            <div *ngIf="!unit?.cost?.Gold && !unit?.cost?.Food && !unit?.cost?.Gold" class="text-danger fw-bolder">Free!</div>
+        </td>
+        </tr>
+    </tbody>
+</table>

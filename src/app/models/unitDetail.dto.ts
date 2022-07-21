@@ -20,4 +20,5 @@ export interface IUnitDetail {
 interface CostI {
     Wood: Number;
     Gold: Number;
+    Food: Number;
 }

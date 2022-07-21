@@ -1,0 +1,21 @@
+.units-table 
+{
+    tbody {
+        display: block;
+        max-height: 620px;
+        overflow-y:auto;
+        tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+    }
+    thead {
+        width:calc(100% - 15px);
+        table-layout: fixed;
+        display: table;
+    }
+    .id {
+        width:45px;
+    }
+}
