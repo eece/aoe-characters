@@ -3,8 +3,8 @@ export interface IUnitDetail {
     name?: String; 
     description?: String; 
     expansion?: String ; 
-    age?: String; 
-    cost?: CostI; 
+    age: string; 
+    cost: CostI; 
     build_time?: Number;
     reload_time?: Number;
     attack_delay?: Number;

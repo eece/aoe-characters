@@ -1,3 +1,29 @@
+<div class="filters">
+    <h1>Age</h1>
+    <div class="d-flex filter-buttons my-2">
+        <app-filter-age-button [age]="0" [label]="'All'" [currentAge]="filter.age || 0"  (addFilter)="addFilter('age', $event)"></app-filter-age-button>
+        <app-filter-age-button [age]="1" [label]="'Dark'" [currentAge]="filter.age || 0" (addFilter)="addFilter('age', $event)"></app-filter-age-button>
+        <app-filter-age-button [age]="2" [label]="'Feudal'" [currentAge]="filter.age || 0" (addFilter)="addFilter('age', $event)"></app-filter-age-button>
+        <app-filter-age-button [age]="3" [label]="'Castle'" [currentAge]="filter.age || 0" (addFilter)="addFilter('age', $event)"></app-filter-age-button>
+        <app-filter-age-button [age]="4" [label]="'Imperial'" [currentAge]="filter.age || 0" (addFilter)="addFilter('age', $event)"></app-filter-age-button>
+    </div>
+    <h1>Costs</h1>
+    <div class="range-filter">
+        <input type="checkbox" class="checkbox" id="wood" (change)="rangeCheckboxChange('wood')" /><label for="wood">Wood</label>
+        <input type="range" [value]="filter.wood" id="woodFilter" (change)="rangeSliderChange($event)" [disabled]="woodDisabled" min="0" max="200" />
+        <div class="range-value" *ngIf="!woodDisabled">0-{{filter.wood}}</div> 
+    </div>
+    <div class="range-filter">
+        <input type="checkbox" class="checkbox" id="food" (change)="rangeCheckboxChange('food')" /><label for="food">Food</label>
+        <input type="range" [value]="filter.food" id="foodFilter" (change)="rangeSliderChange($event)" [disabled]="foodDisabled" min="0" max="200" />
+        <div class="range-value" *ngIf="!foodDisabled">0-{{filter.food}}</div>
+    </div>
+    <div class="range-filter">
+        <input type="checkbox" class="checkbox" id="gold" (change)="rangeCheckboxChange('gold')" /><label for="gold">Gold</label>
+        <input type="range" [value]="filter.gold" id="goldFilter" (change)="rangeSliderChange($event)" [disabled]="goldDisabled" min="0" max="200" />
+        <div class="range-value" *ngIf="!goldDisabled">0-{{filter.gold}}</div>
+    </div>
+</div>
 <table class="table table-bordered units-table">
     <thead>
         <tr>

@@ -10,6 +10,7 @@ import { LabelValueItemComponent } from './components/label-value-item/label-val
 import { StoreModule } from '@ngrx/store';
 import { changeTitleReducer } from './stateManagement/pageTitle.reducer';
 import { HttpClientModule } from '@angular/common/http';
+import { FilterAgeButtonComponent } from './components/filter-age-button/filter-age-button.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     UnitsPageComponent,
     UnitDetailPageComponent,
-    LabelValueItemComponent
+    LabelValueItemComponent,
+    FilterAgeButtonComponent
   ],
   imports: [
     BrowserModule,
