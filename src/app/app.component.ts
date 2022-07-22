@@ -14,8 +14,4 @@ export class AppComponent {
   constructor(private store: Store<{ title: string }>) {
     this.title$ = store.select('title');
   }
-
-  onNavClick(title: string):void {
-    this.store.dispatch(changeTitle({value: title}));
-  }
 }
