@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   title$: Observable<string>;
-  title = 'aeo-characters';
+  title = 'aoe-characters';
   constructor(private store: Store<{ title: string }>) {
     this.title$ = store.select('title');
   }
